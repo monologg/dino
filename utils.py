@@ -115,7 +115,7 @@ class DatasetEntry:
     def save_list(entries: List['DatasetEntry'], path: str):
         with open(path, 'w', encoding='utf8') as fh:
             for entry in entries:
-                fh.write(f'{json.dumps(entry.__dict__)}\n')
+                fh.write(f'{json.dumps(entry.__dict__, ensure_ascii=False)}\n')
 
     @staticmethod
     def read_list(path: str) -> List['DatasetEntry']:

@@ -82,7 +82,7 @@ if __name__ == '__main__':
                              "See the 'task_specs' directory for examples and 'README.md' for more details on how to create this file.")
 
     # Text generation and sampling parameters
-    parser.add_argument("--model_name", type=str, default="gpt2-xl",
+    parser.add_argument("--model_name", type=str, default="skt/kogpt2-base-v2",
                         help="The pretrained model to use for dataset generation. Currently, only variants of GPT2 are supported.")
     parser.add_argument("--openai_api_key", type=str, default=None)
     parser.add_argument("--max_output_length", type=int, default=40,
